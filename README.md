@@ -21,6 +21,8 @@ roian6@naver.com / android-dev@kakao.com
 
 ## Libraries
 
+https://github.com/AppIntro/AppIntro
+
 ## Artwork & Icons
 
 https://undraw.co
