@@ -21,6 +21,6 @@ public class SplashActivity extends AppCompatActivity {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 1500); //wait 1.5 sec
+        }, 2000); //wait 2 sec
     }
 }
