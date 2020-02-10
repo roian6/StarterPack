@@ -1,9 +1,12 @@
 # StarterPack
 Android Starter Pack for EDCAN, for Sunrin.
 
-## RoadMap
+## Functions
 
 - Splash Screen
+
+## RoadMap
+
 - Landing Page (Walkthrough)
 - Sign in & Sign up (Firebase Auth, Cloud Firestore)
 - Main Page (Bottom Navigation)
