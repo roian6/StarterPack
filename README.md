@@ -1,5 +1,5 @@
 # StarterPack
-Android App Starter Pack for EDCAN, for Sunrin.
+Android Starter Pack for EDCAN, for Sunrin.
 
 ## RoadMap
 
