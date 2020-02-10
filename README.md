@@ -12,6 +12,7 @@ Android Starter Pack for EDCAN, for Sunrin.
 - Main Page (Bottom Navigation)
 - User Management (Sign out, Find Password, Delete User)
 - Dark Theme
+- Kotlin Migration
 
 Anything else? pull request or contact address below.
 
