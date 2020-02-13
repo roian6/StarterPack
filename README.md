@@ -12,6 +12,7 @@ Android Starter Pack for EDCAN, for Sunrin.
 
 - Sign in & Sign up (Firebase Auth, Cloud Firestore)
 - Sign in with SNS (Google, Facebook)
+- Check Permissions
 - Main Page (Bottom Navigation)
 - User Management (Sign out, Find Password, Delete User)
 - Dark Theme
