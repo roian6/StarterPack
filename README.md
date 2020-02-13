@@ -23,10 +23,10 @@ roian6@naver.com / android-dev@kakao.com
 
 ## Libraries
 
-App Intro: https://github.com/AppIntro/AppIntro
-Animation Effects: https://github.com/airbnb/lottie-android
+- App Intro: https://github.com/AppIntro/AppIntro
+- Animation Effects: https://github.com/airbnb/lottie-android
 
 ## Artwork & Icons
 
-Illustrations: https://undraw.co
-Animations: https://lottiefiles.com/
+- Illustrations: https://undraw.co
+- Animations: https://lottiefiles.com/
