@@ -15,7 +15,7 @@ Android Starter Pack for EDCAN, for Sunrin.
 - Profile Image(Firebase Storage)
 - Check Permissions
 - Main Page (Bottom Navigation)
-- User Management (Sign out, Find Password, Delete User)
+- User Management (Find Password, Delete User)
 - Dark Theme
 - Kotlin Migration
 
