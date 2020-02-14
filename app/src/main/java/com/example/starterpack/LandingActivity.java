@@ -2,7 +2,6 @@ package com.example.starterpack;
 
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -21,13 +20,14 @@ public class LandingActivity extends AppIntro {
         addSlide(LandingSlide.newInstance(R.layout.activity_landing1));
         addSlide(LandingSlide.newInstance(R.layout.activity_landing2));
         addSlide(LandingSlide.newInstance(R.layout.activity_landing3));
+        addSlide(LandingSlide.newInstance(R.layout.activity_landing4));
 
         showSkipButton(true);
         setProgressButtonEnabled(true);
 
         showSeparator(false);
 
-        setIndicatorColor(getColor(R.color.colorPrimary), getColor(R.color.materialLightGray));
+        setIndicatorColor(getColor(R.color.colorPrimary), getColor(R.color.materialGray5));
         setImageNextButton(getDrawable(R.drawable.ic_navigate_next_black_24dp));
         setSkipText("Skip");
         setColorSkipButton(getColor(R.color.colorPrimary));
@@ -40,14 +40,14 @@ public class LandingActivity extends AppIntro {
 
     @Override
     public void onSkipPressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, MainActivity.class);
+        Intent intent = new Intent(LandingActivity.this, SignActivity.class);
         startActivity(intent);
         finish();
     }
 
     @Override
     public void onDonePressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, MainActivity.class);
+        Intent intent = new Intent(LandingActivity.this, SignActivity.class);
         startActivity(intent);
         finish();
     }

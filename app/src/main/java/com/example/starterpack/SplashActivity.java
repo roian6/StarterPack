@@ -27,10 +27,10 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(() -> {
 
             boolean isLandingShown = getSharedPreferences(this).getBoolean("landing_shown", false);
-            isLandingShown = false; //remove this line, to show landing page only once
+            //isLandingShown = false; //remove this line, to show landing page only once
 
             if (isLandingShown)
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, SignActivity.class));
             else {
                 getSharedPreferences(this)
                         .edit()

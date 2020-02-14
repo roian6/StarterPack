@@ -3,7 +3,6 @@ package com.example.starterpack;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +40,8 @@ public class LandingSlide extends Fragment {
 
         //remove below, when not using button on landing page
         switch(layoutResId){
-            case R.layout.activity_landing2:
-                Button githubBtn = v.findViewById(R.id.btn_land2_github);
+            case R.layout.activity_landing3:
+                Button githubBtn = v.findViewById(R.id.btn_land3_github);
                 githubBtn.setOnClickListener(view -> {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse("https://github.com/roian6/StarterPack"));

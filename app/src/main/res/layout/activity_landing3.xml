@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/walk1"
     android:background="@android:color/white"
     android:orientation="vertical"
     android:gravity="center">
@@ -15,12 +14,12 @@
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_undraw_directions" />
+        android:src="@drawable/ic_undraw_email_campaign" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Started"
+        android:text="Join us"
         android:textColor="@android:color/black"
         android:fontFamily="@font/productb"
         android:textSize="32sp" />
@@ -29,10 +28,24 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start your project with StarterPack!"
+        android:text="Contribute our project on github."
         android:textColor="@android:color/black"
         android:gravity="center"
         android:fontFamily="@font/productr"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_land3_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Visit Github"
+        android:fontFamily="@font/productb"
+        android:layout_marginTop="16dp"
+        android:minHeight="0dp"
+        android:padding="12dp"
+        android:background="@drawable/round_box"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>

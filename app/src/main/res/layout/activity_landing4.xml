@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     android:orientation="vertical"
     android:gravity="center">
@@ -15,13 +14,12 @@
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_undraw_having_fun" />
-
+        android:src="@drawable/ic_undraw_directions" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Free to use"
+        android:text="Get Started"
         android:textColor="@android:color/black"
         android:fontFamily="@font/productb"
         android:textSize="32sp" />
@@ -30,7 +28,7 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Completely Open-Source to everyone."
+        android:text="Start your project with StarterPack!"
         android:textColor="@android:color/black"
         android:gravity="center"
         android:fontFamily="@font/productr"
