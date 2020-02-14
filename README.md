@@ -6,9 +6,13 @@ Android Starter Pack for EDCAN, for Sunrin.
 - Splash Screen
 - Landing Page (Walkthrough)
 
+## Document
+
 ## RoadMap
 
 - Sign in & Sign up (Firebase Auth, Cloud Firestore)
+- Social Login (Google, Facebook)
+- Check Permissions
 - Main Page (Bottom Navigation)
 - User Management (Sign out, Find Password, Delete User)
 - Dark Theme
@@ -22,8 +26,10 @@ roian6@naver.com / android-dev@kakao.com
 
 ## Libraries
 
-https://github.com/AppIntro/AppIntro
+- App Intro: https://github.com/AppIntro/AppIntro
+- Animation Effects: https://github.com/airbnb/lottie-android
 
 ## Artwork & Icons
 
-https://undraw.co
+- Illustrations: https://undraw.co
+- Animations: https://lottiefiles.com/
