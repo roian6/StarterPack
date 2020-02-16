@@ -1,4 +1,4 @@
-package com.example.starterpack;
+package com.david0926.starterpack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
             //isLandingShown = false; //remove this line, to show landing page only once
 
             if (isLandingShown)
-                startActivity(new Intent(SplashActivity.this, SignActivity.class));
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
             else {
                 getSharedPreferences(this)
                         .edit()

@@ -11,4 +11,10 @@
         <item name="android:spotShadowAlpha">0.05</item>
     </style>
 
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/productb</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/materialDarkBlack</item>
+    </style>
+
 </resources>

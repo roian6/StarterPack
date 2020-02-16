@@ -1,4 +1,4 @@
-package com.example.starterpack;
+package com.david0926.starterpack;
 
 import android.content.Intent;
 import android.net.Uri;

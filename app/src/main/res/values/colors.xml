@@ -14,4 +14,7 @@
     <color name="materialGray8">#343a40</color>
     <color name="materialGray9">#212529</color>
     <color name="materialDarkBlack">#121212</color>
+    <color name="materialGreen">#1abc9c</color>
+    <color name="materialYellow">#f1c40f</color>
+    <color name="materialRed">#e74c32</color>
 </resources>

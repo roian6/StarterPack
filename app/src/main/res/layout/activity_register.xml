@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.david0926.starterpack.RegisterActivity" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="pw"
+            type="String" />
+
+        <variable
+            name="pwcheck"
+            type="String" />
+    </data>
+
+    <ViewAnimator
+        android:id="@+id/animator_regi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <!--Before Sign up-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_regi"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+                app:title="" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/productb"
+                android:text="Sign Up"
+                android:textColor="@color/materialDarkBlack"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_regi" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/productr"
+                android:text="Let's get started!"
+                android:textColor="@color/materialGray5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <RelativeLayout
+                android:id="@+id/box_regi_profile"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.056">
+
+                <ImageView
+                    android:id="@+id/img_regi_editprofile"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="4dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@android:color/white"
+                    android:translationZ="16dp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_regi_profile"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_margin="16dp"
+                    android:elevation="8dp"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/profile" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleimg_regi_profile"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_margin="16dp"
+                    app:civ_border_color="@color/materialGray2"
+                    app:civ_border_width="0.5dp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_regi_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/materialGray1"
+                android:fontFamily="@font/productr"
+                android:hint="Name"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:text="@={name}"
+                android:textColorHint="@color/materialGray5"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/box_regi_profile"
+                tools:layout_editor_absoluteX="24dp" />
+
+            <EditText
+                android:id="@+id/edit_regi_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/materialGray1"
+                android:fontFamily="@font/productr"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:text="@={email}"
+                android:textColorHint="@color/materialGray5"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/edit_regi_name"
+                tools:layout_editor_absoluteX="-1dp" />
+
+            <EditText
+                android:id="@+id/edit_regi_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/materialGray1"
+                android:fontFamily="@font/productr"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:text="@={pw}"
+                android:textColorHint="@color/materialGray5"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/edit_regi_email"
+                tools:layout_editor_absoluteX="24dp" />
+
+
+            <EditText
+                android:id="@+id/edit_regi_pwcheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/materialGray1"
+                android:fontFamily="@font/productr"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:text="@={pwcheck}"
+                android:textColorHint="@color/materialGray5"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/edit_regi_pw" />
+
+            <TextView
+                android:id="@+id/txt_regi_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/productr"
+                android:text="Error Message"
+                android:textColor="@color/materialRed"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_regi_pwcheck" />
+
+            <Button
+                android:id="@+id/btn_regi_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/productb"
+                android:text="SIGN UP"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_regi_error"
+                app:layout_constraintVertical_bias="0.466" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--After Sign up-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView2"
+                android:layout_width="match_parent"
+                android:layout_height="412dp"
+                android:layout_marginHorizontal="16dp"
+                android:src="@drawable/ic_undraw_having_fun"
+                app:layout_constraintBottom_toTopOf="@+id/btn_regi_finish"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/hive3" />
+
+            <Button
+                android:id="@+id/btn_regi_finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/round_box"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/productb"
+                android:text="Get Started"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ViewAnimator>
+
+</layout>

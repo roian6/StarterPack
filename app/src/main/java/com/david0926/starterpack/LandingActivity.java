@@ -1,4 +1,4 @@
-package com.example.starterpack;
+package com.david0926.starterpack;
 
 
 import android.content.Intent;
@@ -40,14 +40,14 @@ public class LandingActivity extends AppIntro {
 
     @Override
     public void onSkipPressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, SignActivity.class);
+        Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
 
     @Override
     public void onDonePressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, SignActivity.class);
+        Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
