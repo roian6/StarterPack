@@ -9,12 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:ambientShadowAlpha">0.05</item>
         <item name="android:spotShadowAlpha">0.05</item>
-    </style>
-
-    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
-        <item name="android:fontFamily">@font/productb</item>
-        <item name="android:textSize">26sp</item>
-        <item name="android:textColor">@color/materialDarkBlack</item>
+        <item name="android:windowFullscreen">false</item>
     </style>
 
 </resources>

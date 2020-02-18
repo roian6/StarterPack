@@ -23,8 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //fullscreen
 
-        Handler handler = new Handler();
-        handler.postDelayed(() -> {
+        new Handler().postDelayed(() -> {
 
             boolean isLandingShown = getSharedPreferences(this).getBoolean("landing_shown", false);
             //isLandingShown = false; //remove this line, to show landing page only once
