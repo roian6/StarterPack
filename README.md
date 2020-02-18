@@ -30,6 +30,8 @@ roian6@naver.com / android-dev@kakao.com
 - App Intro: https://github.com/AppIntro/AppIntro
 - Animation Effects: https://github.com/airbnb/lottie-android
 - Circle ImageView: https://github.com/hdodenhof/CircleImageView
+- Image Picker: https://github.com/ParkSangGwon/TedImagePicker
+- Image Loader: https://github.com/bumptech/glide
 
 ## Artwork & Icons
 
