@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -31,10 +30,10 @@
         android:id="@+id/scroll_regi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
+        android:background="@android:color/white"
         android:fillViewport="true"
         android:isScrollContainer="true"
-        android:background="@android:color/white">
+        android:scrollbars="none">
 
         <ViewAnimator
             android:id="@+id/animator_regi"
@@ -62,15 +61,15 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
                     android:fontFamily="@font/productb"
                     android:text="Sign Up"
                     android:textColor="@color/materialDarkBlack"
                     android:textSize="42sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar_regi" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.133" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -112,7 +111,8 @@
                         android:padding="4dp"
                         android:src="@drawable/ic_edit_black_24dp"
                         android:tint="@android:color/white"
-                        android:translationZ="16dp" />
+                        android:translationZ="16dp"
+                        android:contentDescription="Edit Profile" />
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:id="@+id/lottie_regi_profile"
@@ -145,13 +145,17 @@
                     android:backgroundTint="@color/materialGray1"
                     android:fontFamily="@font/productr"
                     android:hint="Name"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLength="10"
                     android:maxLines="1"
                     android:padding="16dp"
                     android:text="@={name}"
                     android:textColorHint="@color/materialGray5"
                     android:textSize="16sp"
-                    app:layout_constraintTop_toBottomOf="@+id/box_regi_profile"
-                    tools:layout_editor_absoluteX="24dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/box_regi_profile" />
 
                 <EditText
                     android:id="@+id/edit_regi_email"
@@ -163,14 +167,17 @@
                     android:backgroundTint="@color/materialGray1"
                     android:fontFamily="@font/productr"
                     android:hint="Email"
+                    android:importantForAutofill="no"
                     android:inputType="textEmailAddress"
+                    android:maxLength="50"
                     android:maxLines="1"
                     android:padding="16dp"
                     android:text="@={email}"
                     android:textColorHint="@color/materialGray5"
                     android:textSize="16sp"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_name"
-                    tools:layout_editor_absoluteX="-1dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_name" />
 
                 <EditText
                     android:id="@+id/edit_regi_pw"
@@ -182,13 +189,15 @@
                     android:backgroundTint="@color/materialGray1"
                     android:fontFamily="@font/productr"
                     android:hint="Password"
+                    android:importantForAutofill="no"
                     android:inputType="textPassword"
                     android:padding="16dp"
                     android:text="@={pw}"
                     android:textColorHint="@color/materialGray5"
                     android:textSize="16sp"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_email"
-                    tools:layout_editor_absoluteX="24dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_email" />
 
 
                 <EditText
@@ -201,19 +210,21 @@
                     android:backgroundTint="@color/materialGray1"
                     android:fontFamily="@font/productr"
                     android:hint="Confirm Password"
+                    android:importantForAutofill="no"
                     android:inputType="textPassword"
                     android:padding="16dp"
                     android:text="@={pwcheck}"
                     android:textColorHint="@color/materialGray5"
                     android:textSize="16sp"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_pw"
-                    tools:layout_editor_absoluteX="24dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_regi_pw" />
 
                 <TextView
-                    android:layout_marginTop="8dp"
                     android:id="@+id/txt_regi_error"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/productb"
                     android:text="Error Message"
@@ -226,7 +237,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edit_regi_pwcheck"
                     app:layout_constraintVertical_bias="1.0" />
 
-                <Button
+                <LinearLayout
                     android:id="@+id/btn_regi_signup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -234,13 +245,31 @@
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/round_box"
                     android:backgroundTint="@color/colorPrimary"
-                    android:fontFamily="@font/productb"
-                    android:text="SIGN UP"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:paddingVertical="17dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ProgressBar
+                        android:id="@+id/progress_regi"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:indeterminateTint="@android:color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_regi_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productb"
+                        android:text="SIGN UP"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -267,6 +296,5 @@
         </ViewAnimator>
 
     </ScrollView>
-
 
 </layout>
