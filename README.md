@@ -31,6 +31,7 @@ roian6@naver.com / android-dev@kakao.com
 - Lottie (https://github.com/airbnb/lottie-android)
 - CircleImageView (https://github.com/hdodenhof/CircleImageView)
 - TedImagePicker (https://github.com/ParkSangGwon/TedImagePicker)
+- TedKeyboardObserver (https://github.com/ParkSangGwon/TedKeyboardObserver)
 - Glide (https://github.com/bumptech/glide)
 
 ## Artwork & Icons
