@@ -1,14 +1,14 @@
 package com.david0926.starterpack;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.david0926.starterpack.fragment.LandingFragment;
 import com.github.paolorotolo.appintro.AppIntro;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LandingActivity extends AppIntro {
 
@@ -17,10 +17,10 @@ public class LandingActivity extends AppIntro {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        addSlide(LandingSlide.newInstance(R.layout.activity_landing1));
-        addSlide(LandingSlide.newInstance(R.layout.activity_landing2));
-        addSlide(LandingSlide.newInstance(R.layout.activity_landing3));
-        addSlide(LandingSlide.newInstance(R.layout.activity_landing4));
+        addSlide(LandingFragment.newInstance(R.layout.activity_landing1));
+        addSlide(LandingFragment.newInstance(R.layout.activity_landing2));
+        addSlide(LandingFragment.newInstance(R.layout.activity_landing3));
+        addSlide(LandingFragment.newInstance(R.layout.activity_landing4));
 
         showSkipButton(true);
         setProgressButtonEnabled(true);
@@ -40,21 +40,20 @@ public class LandingActivity extends AppIntro {
 
     @Override
     public void onSkipPressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
+        finishLanding();
     }
 
     @Override
     public void onDonePressed(Fragment currentFragment) {
-        Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
+        finishLanding();
     }
 
-    @Override
-    public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
-        super.onSlideChanged(oldFragment, newFragment);
-        // Do something when the slide changes.
+    private void finishLanding() {
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            startActivity(new Intent(LandingActivity.this, MainActivity.class));
+        } else startActivity(new Intent(LandingActivity.this, LoginActivity.class));
+
+        finish();
     }
 }

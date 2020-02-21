@@ -10,6 +10,8 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SplashActivity extends AppCompatActivity {
 
     private static SharedPreferences getSharedPreferences(Context context) {
@@ -29,7 +31,10 @@ public class SplashActivity extends AppCompatActivity {
             //isLandingShown = false; //remove this line, to show landing page only once
 
             if (isLandingShown)
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                } else startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+
             else {
                 getSharedPreferences(this)
                         .edit()

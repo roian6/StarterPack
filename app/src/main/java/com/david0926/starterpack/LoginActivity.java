@@ -51,6 +51,10 @@ public class LoginActivity extends AppCompatActivity {
             binding.scrollLogin.smoothScrollTo(0, binding.scrollLogin.getBottom());
         });
 
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        }
+
         //sign in button clicked
         binding.btnLoginSignin.setOnClickListener(view -> {
 
@@ -92,7 +96,14 @@ public class LoginActivity extends AppCompatActivity {
             firebaseAuth
                     .signInWithEmailAndPassword(id, pw)
                     .addOnSuccessListener(authResult -> finishSignIn())
-                    .addOnFailureListener(e -> showErrorMsg(e.getLocalizedMessage()));
+                    .addOnFailureListener(e -> {
+                        String errorMsg = e.getLocalizedMessage();
+
+                        if(errorMsg.contains("password is invalid")){
+                            showErrorMsg("Please enter a valid password.");
+                        }
+                        else showErrorMsg(e.getLocalizedMessage());
+                    });
         };
 
         OnCompleteListener<DocumentSnapshot> firestoreCompleteListener = task -> {
@@ -105,7 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                         .child("profile/" + id + ".png")
                         .getDownloadUrl()
                         .addOnSuccessListener(storageSuccessListener)
-                        .addOnFailureListener(e -> showErrorMsg("Profile image does not exist."));
+                        .addOnFailureListener(e -> showErrorMsg(e.getLocalizedMessage()));
+                                //showErrorMsg("Profile image does not exist."));
 
             } else showErrorMsg("User data does not exist.");
         };

@@ -1,4 +1,4 @@
-package com.david0926.starterpack;
+package com.david0926.starterpack.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,13 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class LandingSlide extends Fragment {
+import com.david0926.starterpack.R;
+
+public class LandingFragment extends Fragment {
 
     private static final String ARG_LAYOUT_RES_ID = "layoutResId";
     private int layoutResId;
 
-    public static LandingSlide newInstance(int layoutResId) {
-        LandingSlide fragment = new LandingSlide();
+    public static LandingFragment newInstance(int layoutResId) {
+        LandingFragment fragment = new LandingFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_LAYOUT_RES_ID, layoutResId);
         fragment.setArguments(args);
